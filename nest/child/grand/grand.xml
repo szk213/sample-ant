@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="parent" default="grant_build" basedir=".">
+    <property name="iam" value="grant" />
+    <target name="grant_build" description="ant tests">
+        <echo message="${iam}" />
+    </target>
+</project>

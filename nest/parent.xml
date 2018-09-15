@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="parent" default="parent_build" basedir=".">
+    <property name="iam" value="parent" />
+    <!--現在のパスを絶対パスで取得-->
+    <dirname property="base" file="${ant.file}"/>
+	<property name="child.xml" location="${base}/child/child.xml" />
+    <target name="parent_build" description="ant tests">
+        <echo message="child.xml:${child.xml}" />
+        <echo message="${iam}" />
+		<ant antfile="${child.xml}"/>
+		<ant antfile="${child.xml}">
+            <property name="iam" value="aaa" />
+        </ant>
+    </target>
+</project>

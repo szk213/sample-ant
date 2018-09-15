@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="child" default="child_build" basedir=".">
+    <property name="iam" value="child" />
+    <dirname property="child.base" file="${ant.file}"/>
+	<property name="child.grand.xml" location="${child.base}/grand/grand.xml" />
+    <target name="child_build" description="ant tests">
+        <echo message="grand.xml:${child.grand.xml}" />
+        <echo message="${iam}" />
+		<ant antfile="${child.grand.xml}">
+            <property name="iam" value="bbb" />
+        </ant>
+    </target>
+</project>

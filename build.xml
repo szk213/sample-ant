@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="sampleAnt" default="build" basedir=".">
+	<property name="build.xml" location="nest/parent.xml" />
+    <property name="test" value="test" />
+    <target name="build" description="ant tests">
+        <echo message="${test}" />
+		<ant antfile="${build.xml}"/>
+    </target>
+</project>
